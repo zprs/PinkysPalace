@@ -52,7 +52,6 @@ body {
 #logoTitle
 {
     z-index: 3;
-    position: abso;
     width: 50vw;
     left: 25vw;
     margin-top: 50vh;
@@ -227,4 +226,37 @@ a {
     left: 0;
     transform: translateZ(-5px) scale(1.5);
     z-index: -2;
+    overflow: hidden;
 }
+
+/* PINK SECTION */
+
+
+#pinkWrapper
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: calc(300vh);
+    left: 0;
+    /* transform: translateZ(0px) scale(1.5); */
+    z-index: 2;
+    background-color: #fc76c1;
+}
+
+#blackBlendAlphaWidth
+{
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    z-index: 5;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }

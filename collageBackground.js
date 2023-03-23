@@ -12,7 +12,6 @@ $(function() {
 
     for(let i = 1; i < totalImages + 1; i++)
     {
-
         let imageIndex = (maxImages + 1) - (i % maxImages + 1);
         let imageName = imageIndex;
         let rotation = -100 + 200 * Math.random();
@@ -70,7 +69,14 @@ function reorderAllImages()
 
 
     });
+
+    $("#loadingHider").addClass("hidden");
 }
+
+$( window ).resize(function() {
+    $("#loadingHider").removeClass("hidden");
+    reorderAllImages();
+  });
 
 function isOverlapping(img)
 {
